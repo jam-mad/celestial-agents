@@ -1,0 +1,43 @@
+{
+  "_comment": [
+    "Zodiac compatibility chart, originally from Zodiac.cs (Compatibility static class).",
+    "Scale 0-7: 0 = no affinity, 7 = maximum affinity.",
+    "Rows and columns are indexed by Sign enum order: Aries=0 .. Pisces=11.",
+    "The matrix is intentionally NOT symmetric — e.g. Aries->Taurus may differ",
+    "from Taurus->Aries, reflecting the directional nature of astrological tradition.",
+    "Edit this file to swap in a different tradition's values without touching code."
+  ],
+  "signs": [
+    "aries", "taurus", "gemini", "cancer", "leo", "virgo",
+    "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"
+  ],
+  "chart": {
+    "aries":       [7, 3, 5, 4, 6, 4, 7, 3, 6, 2, 6, 2],
+    "taurus":      [3, 7, 1, 6, 3, 6, 2, 6, 1, 7, 2, 2],
+    "gemini":      [5, 1, 5, 1, 7, 4, 7, 0, 4, 1, 7, 2],
+    "cancer":      [4, 6, 1, 7, 3, 5, 3, 5, 1, 5, 0, 7],
+    "leo":         [6, 3, 5, 3, 4, 3, 5, 4, 7, 1, 7, 2],
+    "virgo":       [4, 6, 4, 5, 3, 6, 3, 7, 4, 7, 0, 5],
+    "libra":       [7, 2, 7, 3, 5, 3, 6, 1, 5, 3, 4, 1],
+    "scorpio":     [3, 6, 0, 5, 4, 7, 1, 7, 0, 6, 1, 4],
+    "sagittarius": [6, 1, 4, 1, 7, 4, 5, 0, 7, 1, 5, 2],
+    "capricorn":   [2, 7, 1, 5, 1, 7, 3, 6, 1, 6, 0, 5],
+    "aquarius":    [6, 2, 7, 0, 7, 0, 4, 1, 5, 0, 6, 2],
+    "pisces":      [3, 3, 2, 7, 3, 5, 1, 5, 2, 5, 3, 1]
+  },
+  "totals": {
+    "_comment": "Row sums — total outward compatibility of each sign across all others.",
+    "aries":       55,
+    "taurus":      46,
+    "gemini":      44,
+    "cancer":      47,
+    "leo":         50,
+    "virgo":       54,
+    "libra":       47,
+    "scorpio":     44,
+    "sagittarius": 43,
+    "capricorn":   44,
+    "aquarius":    40,
+    "pisces":      40
+  }
+}

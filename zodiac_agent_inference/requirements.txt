@@ -1,0 +1,28 @@
+# Zodiac Behavior Engine — Python dependencies
+#
+# Only direct imports are listed; pip resolves the rest of the tree.
+# Pinned to the versions the project was developed against.
+
+# --- Emotion decoder (decoder.py) ---
+torch==2.12.0
+transformers==5.10.2
+
+# --- WebSocket bridge: server + Gradio client (server.py, gradio_app.py) ---
+websockets==16.0
+
+# --- Dashboard (gradio_app.py) ---
+gradio==6.16.0
+
+# --- Custom confidence chart component (optional) ---
+# The dashboard imports gradio_confidencechart for animated emotion bars and
+# falls back to gr.Label automatically if it is not installed, so this is not
+# required to run the app.
+#
+# It lives in its own repository and is not on PyPI yet. To enable it, install
+# from a local clone (after building the component once with `gradio cc build`):
+#
+#     pip install -e /path/to/gradio-confidence-chart/confidencechart
+#
+# or directly from the repo over HTTPS:
+#
+#     pip install "git+https://github.com/jam-mad/gradio-confidence-chart.git#egg=gradio_confidencechart&subdirectory=confidencechart"
